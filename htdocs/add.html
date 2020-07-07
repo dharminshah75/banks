@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Banks</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="container mt-5 m-2">
+            <h3>Add Bank Entry</h3>
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <form method="POST" action="/php/action.php">
+                        <div class="form-group">
+                            <label>Date</label>
+                            <input id="datePicker" type="date" class="form-control" name="date" />
+                        </div>
+                        <div class="form-group">
+                            <label>Select Account:</label>
+                            <select class="form-control" name="account" id="account">
+                                <option value="Dena_Kalpesh">Dena - Kalpesh Shah</option>
+                                <option value="Dena_Meena">Dena - Meena Shah</option>
+                                <option value="Dena_Dharmin">Dena - Dharmin Shah</option>
+                                <option value="Dena_Isha">Dena - Isha Shah</option>
+                                <option value="BOB_Kalpesh">BOB - Kalpesh Shah</option>
+                                <option value="BOI_Kalpesh">BOI - Kalpesh Shah</option>
+                                <option value="Saraswat_Meena">Saraswat - Meena Shah</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Particulars</label>
+                            <textarea name="particulars" rows="3" class="form-control" placeholder="Eg: Fees" ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Amount: </label>
+                            <input type="number" class="form-control" step="0.01" name="amount" />
+                        </div>
+                        <div class="form-group">
+                            <label>If paying by cheque, Enter Cheque Number</label>
+                            <input type="text" name="cheque" value="" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="type" value="debit">Debit
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="type" value="credit" >Credit
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <input type="submit" value="Submit" class="btn btn-success" />
+                    </form>
+                    <br>
+                    <a href="http://dharminbanks.epizy.com/" class="btn btn-danger">Back</a>
+                </div>
+            </div>
+        </div>
+            
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script>
+            Date.prototype.toDateInputValue = (function() {
+                var local = new Date(this);
+                local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+                return local.toJSON().slice(0,10);
+            });
+
+            document.getElementById('datePicker').value = new Date().toDateInputValue();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bank</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron center">
+                <h3>Bank</h3>
+            </div>
+            <br><hr><br>
+            <div class="row">
+                <div class="col-12 col-sm-6 center divider">
+                    <h2>Add Bank Entry</h2><br>
+                    <a href="./add.html" type="button" class="btn btn-lg btn-success"><strong>Click here</strong></a>
+                </div>
+            </div>
+            <br><hr><br>
+            <div class="row">
+                <div class="col-12 col-sm-6 center divider">
+                    <h2>View Passbook</h2><br>
+                    <form method="POST" action="../php/show_passbook.php">
+                        <div class="form-group">
+                            <select class="form-control" name="account" id="account">
+                                <option value="Dena_Kalpesh">Dena - Kalpesh Shah</option>
+                                <option value="Dena_Meena">Dena - Meena Shah</option>
+                                <option value="Dena_Dharmin">Dena - Dharmin Shah</option>
+                                <option value="Dena_Isha">Dena - Isha Shah</option>
+                                <option value="BOB_Kalpesh">BOB - Kalpesh Shah</option>
+                                <option value="BOI_Kalpesh">BOI - Kalpesh Shah</option>
+                                <option value="Saraswat_Meena">Saraswat - Meena Shah</option>
+                            </select>
+                        </div>
+                        <input type="submit" value="Show" class="btn btn-primary" />
+                    </form>
+                </div>
+            </div>
+            <br><hr><br>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
